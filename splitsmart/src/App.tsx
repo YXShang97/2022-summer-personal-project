@@ -11,15 +11,21 @@ const initialPeople = ["Peter", "Jack", "Emma"]; //list of everyone
 // unique id beside name
 const initialBills = [
   {
-    id: 1,
+    // id: 1,
     amount: 100,
     purpose: "dinner",
     bearer: "Peter",
     showDetails: false,
   },
-  { id: 2, amount: 200, purpose: "tour", bearer: "Jack", showDetails: false },
   {
-    id: 3,
+    // id: 2,
+    amount: 200,
+    purpose: "tour",
+    bearer: "Jack",
+    showDetails: false,
+  },
+  {
+    // id: 3,
     amount: 300,
     purpose: "medical",
     bearer: "Emma",
@@ -27,14 +33,14 @@ const initialBills = [
   },
 ];
 
-const splits = [];
-initialBills.forEach(() => {
+// const splits = [];
+// initialBills.forEach(() => {
 
-})
+// })
 
 // Calculate single entry of all splits, combine into array, and manipulate/compute based on array
 // for each through array, if expense, reduce amount, if income add amount
-[
+
 //   {
 //     name: 'Peter',
 //     amount: 1000,
@@ -45,24 +51,24 @@ initialBills.forEach(() => {
 //   }
 // ]
 
-interface IBill {
-  amount: number;
-  purpose: Categories;
-}
+// interface IBill {
+//   amount: number;
+//   purpose: Categories;
+// }
 
-enum Categories {
-  RENT = "RENT",
-  TRANSPORTATION = "TRANSPORTATION",
-}
+// enum Categories {
+//   RENT = "RENT",
+//   TRANSPORTATION = "TRANSPORTATION",
+// }
 
-// When input bill, select the users who are splitting this bill, default to all
-// Bill -> Split (every person's owed share)
+// // When input bill, select the users who are splitting this bill, default to all
+// // Bill -> Split (every person's owed share)
 
-const arr = Object.entries(Categories).map((entry) => ({
-  [entry[0]]: entry[1],
-}));
+// const arr = Object.entries(Categories).map((entry) => ({
+//   [entry[0]]: entry[1],
+// }));
 
-console.log(arr);
+// console.log(arr);
 
 function App() {
   const [bills, setBills] = React.useState(initialBills);

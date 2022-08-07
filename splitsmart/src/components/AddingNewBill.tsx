@@ -8,31 +8,31 @@ type Props = {
   ) => void;
 };
 
-const isValueValidDigit = (value: string): boolean => {
-  return new RegExp(/^\d+$/).test(value);
-};
+// const isValueValidDigit = (value: string): boolean => {
+//   return new RegExp(/^\d+$/).test(value);
+// };
 
 const AddingNewBill = (props: Props) => {
   const [inputBearer, setInputBearer] = React.useState("");
   const [inputPurpose, setInputPurpose] = React.useState("");
   const [inputAmount, setInputAmount] = React.useState("");
-  const hanldeInputAmount = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = event.target;
 
-    if (isValueValidDigit(value)) {
-      setInputAmount(value);
-    }
+  // const hanldeInputAmount = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   const { value } = event.target;
 
-    // const dummyProps = { handleAdd: () => {}, index: 1, smallerIndex: 2 };
+  //   if (isValueValidDigit(value)) {
+  //     setInputAmount(value);
+  //   }
 
-    // const dummyComponent = ({ index, handleAdd, smallerIndex }) => {
-    //   console.log(index);
+  // const dummyProps = { handleAdd: () => {}, index: 1, smallerIndex: 2 };
 
-    //   smallerComponent({ ...dummyComponent });
-    // };
+  // const dummyComponent = ({ index, handleAdd, smallerIndex }) => {
+  //   console.log(index);
 
-    // const smallerComponent = () => {};
-  };
+  //   smallerComponent({ ...dummyComponent });
+  // };
+
+  // const smallerComponent = () => {};
 
   return (
     <div className="AddingNewBill">
